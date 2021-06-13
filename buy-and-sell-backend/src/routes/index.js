@@ -1,7 +1,7 @@
 import { addViewToListingRoute } from './addViewToListing';
-import { createNewListingRoute } from 'createNewListing';
+import { createNewListingRoute } from './createNewListing';
 import { updateListingRoute } from './updateListing';
-import { deleteListingRoute } from './deleteListing';;
+import { deleteListingRoute } from './deleteListings';
 import { getAllListingsRoute } from './getAllListings';
 import { getListingRoute } from './getListing';
 import { getUserListingsRoute } from './getUserListings';

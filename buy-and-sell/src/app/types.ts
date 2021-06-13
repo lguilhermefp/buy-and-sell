@@ -5,3 +5,10 @@ export interface Listing {
     price: number,
     views: number
 }
+
+export interface IProps {
+    name: string,
+    description: string,
+    price: number
+}
+  
