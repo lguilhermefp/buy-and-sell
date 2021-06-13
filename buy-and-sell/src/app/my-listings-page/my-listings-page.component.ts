@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fakeListings } from '../fake-data';
+import { fakeMyListings } from '../fake-data';
 import { Listing } from '../types';
 
 @Component({
@@ -12,7 +12,7 @@ export class MyListingsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.listings = fakeListings;
+    this.listings = fakeMyListings;
   }
 
   onDeleteClicked(listingId: string): void {

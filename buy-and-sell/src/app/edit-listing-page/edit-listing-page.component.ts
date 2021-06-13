@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,  Router } from '@angular/router';
+import { Listing } from '../types';
+import { fakeMyListings } from '../fake-data';
 
 @Component({
   selector: 'app-edit-listing-page',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-listing-page.component.css']
 })
 export class EditListingPageComponent implements OnInit {
+  listing: any;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.listing = fakeMyListings.find(listing => listing.id === id);
+  }
+
+  onSubmit(): void {
+    alert('Savin changes to the listing');
+    this.router.navigateByUrl('/my-listings');
   }
 
 }
